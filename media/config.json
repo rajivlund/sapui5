@@ -1,0 +1,51 @@
+{
+     "SAPVB": {
+      "version": "2.0",
+       "xmlns:VB": "VB",
+ 
+      "Windows": {
+         "Set": {
+              "Window": { "id": "W1", "type": "geo", "refScene": "S1" }
+           }
+      },
+      "Scenes": {
+           "Set": {
+          "SceneGeo": { "id": "S1", "refMapLayerStack": "MAPQUESTLAYER",
+                        "initialStartPosition": "6;30;0", "initialZoom":
+                        "3" }
+         }
+      },
+        "MapProviders": {
+           "Set": {
+              "MapProvider":  {
+                      "name": "MAPQUEST",
+                      "tileX": "256",
+                      "tileY": "256",
+                      "maxLOD": "19",
+                      "copyright": "Tiles Courtesy of MapQuest © OpenStreetMap under ODbL v1.0 ",
+                 "Source": [
+                      {
+                        "id": "s1",
+                      "url": "http://otile1.mqcdn.com/tiles/1.0.0/map/{LOD}/{X}/{Y}.png"
+                     }
+                ]
+             }
+         }
+ 
+ 
+      },
+        "MapLayerStacks": {
+           "Set": {
+              "MapLayerStack": {
+                 "name": "MAPQUESTLAYER",
+                 "MapLayer": { 
+                    "name": "L1",
+                    "refMapProvider": "MAPQUEST",
+                    "opacity": "1.0",
+                    "colBkgnd": "RGB(255,255,255)"
+               }
+            }
+           }
+        }
+     }
+  }
